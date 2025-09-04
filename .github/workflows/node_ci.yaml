@@ -4,10 +4,10 @@ name: NodeJS-ci
 
 on: 
     pull_request:
-        branches: ["master"]
+        branches: ["main"]
         
     push:
-       branches: ["master"]
+       branches: ["main"]
         
 
 # Stages in CI build,docker,update k8s file
