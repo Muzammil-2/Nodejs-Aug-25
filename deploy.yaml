@@ -15,7 +15,7 @@ template:
   spec:
   containers:
   - name: nodecontainer
-    image: quadrimuzammil/nodeapp:17472792682
+    image: quadrimuzammil/nodeapp:17472817338
   env:
   - name: configmap
     value: username
