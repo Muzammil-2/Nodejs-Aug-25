@@ -19,7 +19,7 @@ template:
   env:
   - name: configmap
     value: username
-  - name: secretes
+  - name: secrete
     value: password
   volumeMount:
   - name: pvcone
