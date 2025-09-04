@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+Kind:  deployment
+metadata:
+  name: nodeapp
+spec:
+replicas: 2
+strategy:
+  rollingUpdate
+lable:
+  selector:
+     app: node
+template:
+  lable:
+     app: node
+  spec:
+  containers:
+  - name: nodecontainer
+    image: quadrimuzammil/nodeapp:${{github.run_id}}
+  env:
+  - name: configmap
+    value: username
+  - name: secretes
+    value: password
+  volumeMount:
+  - name: pvcone
+    claim: pvcone
+Volume:
+- name: pvcone
+  pvc: pvcone
+
+Requests:
+  cpu: 2
+limits:
+  cpu: 5
