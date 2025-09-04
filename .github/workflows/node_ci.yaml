@@ -105,7 +105,7 @@ jobs:
             git config --global user.name "Muzammil-2"
             git add deploy.yaml
             git commit -m "[CI]: Update product catalog image tag"
-            git push origin HEAD:master -f
+            git push origin HEAD:main -f
 
         
         
